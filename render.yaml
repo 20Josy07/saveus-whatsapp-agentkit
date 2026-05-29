@@ -1,0 +1,32 @@
+# render.yaml — Blueprint de despliegue para Render
+# Generado por AgentKit
+#
+# En Render: New + -> Blueprint -> conecta este repo.
+# Las variables marcadas con "sync: false" las llenas manualmente en el dashboard
+# (son secretos y no deben quedar en el repo).
+
+services:
+  - type: web
+    name: saveus-whatsapp-agentkit
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: WHATSAPP_PROVIDER
+        value: twilio
+      - key: ENVIRONMENT
+        value: production
+      # Secretos de Twilio — se configuran en el dashboard de Render
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_API_KEY_SID
+        sync: false
+      - key: TWILIO_API_KEY_SECRET
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        sync: false
+      # URL publica de este servicio en Render (para los links de seguimiento)
+      # Ej: https://saveus-whatsapp-agentkit.onrender.com
+      - key: BASE_URL
+        sync: false
