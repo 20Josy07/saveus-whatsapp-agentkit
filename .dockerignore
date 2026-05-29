@@ -1,0 +1,27 @@
+# Secretos — nunca van a la imagen (se configuran en Railway)
+.env
+.env.local
+
+# Git / IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

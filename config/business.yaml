@@ -1,0 +1,17 @@
+negocio:
+  nombre: "SaveUs"
+  descripcion: "App de seguridad personal con alertas SOS y seguimiento GPS en tiempo real"
+  tipo: "emergencias"
+
+agente:
+  nombre: "Asistente SaveUs"
+  tono: "calmado, claro y directo"
+  casos_de_uso:
+    - "Notificar contactos de emergencia con link de seguimiento único"
+    - "Conversar con contactos para coordinar respuesta"
+    - "Actualizar ubicación GPS en tiempo real"
+    - "Notificar cancelación de emergencia"
+
+metadata:
+  version: "1.0"
+  integracion: "SaveUs"
